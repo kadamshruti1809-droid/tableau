@@ -272,6 +272,9 @@
       <column caption='host Since_NEW' datatype='date' name='[Calculation_0583066279669767]' role='dimension' type='ordinal'>
         <calculation class='tableau' formula='IFNULL([Host Since],DATE(&quot;01-01-2010&quot;))' />
       </column>
+      <column caption='Property type_NEW' datatype='string' name='[Calculation_0583066281472008]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IFNULL([Property Type],&quot;Unknown&quot;)' />
+      </column>
       <column caption='Review Performance Score ' datatype='integer' name='[Calculation_1733155095617536]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='[Number Of Reviews]*[Review Scores Rating]' />
       </column>
@@ -299,6 +302,7 @@
         <field-sort-custom-order field='Name' />
         <field-sort-custom-order field='Neighbourhood' />
         <field-sort-custom-order field='Property Type' />
+        <field-sort-custom-order field='Calculation_0583066281472008' />
         <field-sort-custom-order field='Review Scores Rating (bin)' />
         <field-sort-custom-order field='Room Type' />
         <field-sort-custom-order field='Zipcode' />
